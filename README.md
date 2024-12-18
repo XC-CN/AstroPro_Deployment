@@ -59,8 +59,8 @@ rviz
 
 /camera/depth/points/PointClouds2
 
-2.修改左侧选项
-
+2.修改左侧选项\
+Fixed Frame: camera_depth_frame
 Color Transformer: AxisColor
 
-Axis:Z
+
