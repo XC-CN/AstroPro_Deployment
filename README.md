@@ -19,11 +19,39 @@ sudo ldconfig
 安装完留下的文件（相当于安装包）可以删除，libuvc已经安装到系统中。
 
 ## 2.配置ROS工作空间
-### （1）新建工作空间
+新建工作空间
 `mkdir -p ~/ros_ws/src`
-### (2)将本仓库中的文件
 
-## Rviz上的深度随颜色变化设置
+将本仓库中的文件OpenNI_SDK_ROS_v1.1.4_20220927_e5a9dc_Linux.zip解压并放入src文件夹中
+
+编译：
+```
+cd ~/ros_ws
+catkin_make
+```
+
+安装libusb rules
+```
+cd ~/ros_ws
+source ./devel/setup.bash
+roscd astra_camera
+./scripts/create_udev_rules
+sudo udevadm control --reload && sudo  udevadm trigger
+```
+
+## 3.启动相机并测试
+在terminal 1
+```
+source ./devel/setup.bash 
+roslaunch astra_camera astra.launch
+```
+在terminal 2
+```
+source ./devel/setup.bash
+rviz
+```
+
+设置Rviz，使得深度随颜色变化
 ![image](https://github.com/user-attachments/assets/72652ef8-cf56-4039-831e-dc6de0033642)
 具体更改选项：
 
