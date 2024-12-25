@@ -1,5 +1,4 @@
-# Astro-Pro-ORB_SLAM2
-
+# AstroPRO_Deployment
 ## 1.安装SDK
 基于奥比中光Ai开放平台文档：https://vcp.developer.orbbec.com.cn:9001/project-2/doc-83/
 ### （1）安装依赖
